@@ -6,7 +6,7 @@
 <h3 align="center">Software Developer | Data Scientist | Python Enthusiast</h3>
 
 - 🌱 **Currently Learning**: Next.js, Kubernetes, Docker, CI/CD, Linux, and building scalable projects  
-- 📫 **Discover My Work**: [My Portfolio](https://abhishek-1804.github.io/abhishekdeshpande_portfolio/)  
+- 📫 **Discover My Work**: [My Portfolio](https://abhishekdp.com)  
 - ⚡ **Fun Fact**: Equal isn't always equal in JavaScript!
 
 ## Stats
