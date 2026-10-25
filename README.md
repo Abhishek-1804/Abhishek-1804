@@ -1,13 +1,20 @@
 <div align="center">
-  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
+  <img src="./assets/header.svg" width="100%" alt="Hi, I'm Abhishek Deshpande: Software Developer, Data Scientist, Python Enthusiast"/>
 </div>
 
-<h1 align="center">Hi 👋, I'm Abhishek Deshpande</h1>
-<h3 align="center">Software Developer | Data Scientist | Python Enthusiast</h3>
+<br/>
 
-- 🌱 **Currently Learning**: Next.js, Kubernetes, Docker, CI/CD, Linux, and building scalable projects  
-- 📫 **Discover My Work**: [My Portfolio](https://abhishekdp.com)  
-- ⚡ **Fun Fact**: Equal isn't always equal in JavaScript!
+<div align="center">
+  <a href="https://abhishekdp.com">
+    <img src="./assets/terminal.svg" width="90%" alt="Terminal: whoami, currently learning Next.js, Kubernetes, Docker, CI/CD and Linux, and why [] == ![] is true in JavaScript"/>
+  </a>
+</div>
+
+<div align="center">
+
+📫 **Discover My Work**: [abhishekdp.com](https://abhishekdp.com)
+
+</div>
 
 ## Stats
 
@@ -21,4 +28,16 @@
 
 <br clear="both">
 
-![Snake animation](https://raw.githubusercontent.com/abhishek-1804/abhishek-1804/output/github-contribution-grid-snake-dark.svg)
+## Contribution City
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abhishek-1804/abhishek-1804/output/profile-night-rainbow.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abhishek-1804/abhishek-1804/output/profile-green-animate.svg" />
+  <img src="https://raw.githubusercontent.com/abhishek-1804/abhishek-1804/output/profile-night-rainbow.svg" alt="3D contribution graph" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/abhishek-1804/abhishek-1804/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/abhishek-1804/abhishek-1804/output/github-contribution-grid-snake.svg" />
+  <img src="https://raw.githubusercontent.com/abhishek-1804/abhishek-1804/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+</picture>
