@@ -15,10 +15,10 @@ SANS = "'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif"
 NAME = "Abhishek Deshpande"
 GREETING = "hi there, i'm"
 ROLES = [
-    "Software Developer",
-    "Data Scientist",
-    "Python Enthusiast",
-    "Building scalable things",
+    "Currently @ UiPath",
+    "ex-SDE @ AWS",
+    "DevOps & Cloud",
+    "Automating all the things",
 ]
 
 PROMPT = "abhishek@github:~$"
@@ -26,18 +26,21 @@ PROMPT = "abhishek@github:~$"
 # a list of (text, color) segments.
 SESSION = [
     ("whoami", [
-        [("Abhishek Deshpande", "#e6edf3"), (" // software developer & data scientist", "#8b949e")],
+        [("Abhishek Deshpande", "#e6edf3"), (" // software developer, into devops", "#8b949e")],
+        [("now ", "#8b949e"), ("@ UiPath", "#ff9e64"), ("   prev ", "#8b949e"), ("SDE @ AWS", "#ffd166")],
     ]),
     ("cat currently_learning.txt", [
-        [("[next.js]", "#e6edf3"), ("  ", ""), ("[kubernetes]", "#58a6ff"), ("  ", ""),
+        [("[kubernetes]", "#58a6ff"), ("  ", ""),
          ("[docker]", "#2de2e6"), ("  ", ""), ("[ci/cd]", "#f778ba"), ("  ", ""), ("[linux]", "#ffd166")],
     ]),
     ("node -e \"console.log([] == ![])\"", [
         [("true", "#7ee787")],
         [("// equal isn't always equal in JavaScript", "#8b949e")],
     ]),
-    ("open https://abhishekdp.com", [
-        [("-> launching portfolio", "#d2a8ff"), (" ...", "#8b949e")],
+    ("kubectl get pods -n life", [
+        [("NAME              READY   STATUS", "#8b949e")],
+        [("devops-journey    1/1     ", "#e6edf3"), ("Running", "#7ee787")],
+        [("coffee-machine    0/1     ", "#e6edf3"), ("CrashLoopBackOff", "#ff7b72")],
     ]),
 ]
 
@@ -244,8 +247,123 @@ def terminal():
 </svg>'''
 
 
+PROJECTS = {
+    "homelab": {
+        "lines": ["Single-node k3s cluster on a headless laptop,",
+                  "reachable only over Tailscale. Provisioned end to",
+                  "end with mise, Terraform and 1Password secrets."],
+        "tags": [("k3s", "#ffd166"), ("terraform", "#d2a8ff"), ("tailscale", "#2de2e6"), ("aws", "#ff9e64")],
+    },
+    "email-optimizer": {
+        "lines": ["Multi-account email client for bulk spam filtering.",
+                  "Connect Gmail over OAuth + IMAP, group by sender,",
+                  "block in bulk. Nothing is ever deleted."],
+        "tags": [("typescript", "#58a6ff"), ("imap", "#7ee787"), ("oauth", "#ff3cac"), ("sqlite", "#2de2e6")],
+    },
+}
+
+
+def box(x, y, w, h, label, color):
+    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="8" fill="#161b22" stroke="{color}" stroke-width="1.5"/>'
+            f'<text x="{x + w / 2}" y="{y + h - 9}" text-anchor="middle" font-family="{MONO}" font-size="11" '
+            f'fill="{color}">{label}</text>')
+
+
+def homelab_visual():
+    out = [
+        '<path d="M95 62 H170 M260 62 H330" stroke="#30363d" stroke-width="2" stroke-dasharray="4 5"/>',
+        box(25, 30, 70, 54, "laptop", "#e6edf3"),
+        '<rect x="45" y="40" width="30" height="18" rx="2" fill="none" stroke="#e6edf3" stroke-width="1.5"/>'
+        '<path d="M40 61 h40" stroke="#e6edf3" stroke-width="1.5"/>',
+        box(170, 30, 90, 54, "tailscale", "#2de2e6"),
+    ]
+    for i in range(3):
+        for j in range(3):
+            out.append(f'<circle cx="{203 + j * 12}" cy="{41 + i * 7}" r="2" fill="#2de2e6" opacity="{0.4 if (i + j) % 2 else 1}"/>')
+    out.append(box(330, 22, 80, 70, "k3s", "#ffd166"))
+    for k in range(6):
+        x, y = 345 + (k % 3) * 18, 32 + (k // 3) * 16
+        out.append(f'<rect x="{x}" y="{y}" width="12" height="11" rx="2" fill="#7ee787">'
+                   f'<animate attributeName="opacity" values="1;0.25;1" dur="{1.6 + k * 0.37:.2f}s" repeatCount="indefinite"/></rect>')
+    # Packets hop laptop -> tailscale -> k3s.
+    for begin in (0, 0.8, 1.6):
+        out.append(f'<circle r="3.5" fill="#ff3cac" opacity="0">'
+                   f'<animateMotion path="M95 62 H330" dur="2.4s" begin="{begin}s" repeatCount="indefinite"/>'
+                   f'<animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.05;0.4;0.95;1" dur="2.4s" begin="{begin}s" repeatCount="indefinite"/></circle>')
+    out.append('<text x="132" y="52" text-anchor="middle" font-family="' + MONO + '" font-size="9" fill="#8b949e">ssh</text>'
+               '<text x="295" y="52" text-anchor="middle" font-family="' + MONO + '" font-size="9" fill="#8b949e">kubectl</text>')
+    return "\n".join(out)
+
+
+def envelope(color):
+    return (f'<rect x="-10" y="-7" width="20" height="14" rx="2" fill="#161b22" stroke="{color}" stroke-width="1.5"/>'
+            f'<path d="M-10 -6 L0 2 L10 -6" fill="none" stroke="{color}" stroke-width="1.5"/>')
+
+
+def email_visual():
+    out = [
+        '<path d="M70 58 H200 M230 58 C270 58 290 34 330 34 M230 58 C270 58 290 84 330 84" fill="none" stroke="#30363d" stroke-width="2" stroke-dasharray="4 5"/>',
+        box(18, 24, 52, 70, "gmail", "#e6edf3"),
+    ]
+    for i in range(3):
+        out.append(f'<rect x="30" y="{32 + i * 13}" width="28" height="9" rx="2" fill="none" stroke="#8b949e"/>')
+    out.append('<path d="M196 40 H236 L222 62 V76 L210 70 V62 Z" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>'
+               f'<text x="216" y="96" text-anchor="middle" font-family="{MONO}" font-size="10" fill="#d2a8ff">group by sender</text>')
+    out.append(box(330, 12, 80, 42, "inbox", "#7ee787"))
+    out.append(box(330, 64, 80, 42, "blocked", "#ff7b72"))
+    # Mail flows into the filter, then wanted mail goes up and bulk mail goes down.
+    for i, (dest, color) in enumerate([("M216 58 C270 58 290 34 360 30", "#7ee787"),
+                                       ("M216 58 C270 58 290 84 360 82", "#ff7b72"),
+                                       ("M216 58 C270 58 290 84 360 82", "#ff7b72")]):
+        begin = i * 1.1
+        path = "M70 58 H216 " + dest[len("M216 58 "):]
+        out.append(f'<g opacity="0">{envelope(color)}'
+                   f'<animateMotion path="{path}" dur="3.3s" begin="{begin}s" repeatCount="indefinite" '
+                   f'keyPoints="0;0.45;1" keyTimes="0;0.5;1" calcMode="linear"/>'
+                   f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.88;1" dur="3.3s" begin="{begin}s" repeatCount="indefinite"/></g>')
+    return "\n".join(out)
+
+
+def project_card(name, project, visual):
+    W, H = 430, 266
+    lines = "".join(f'<text x="24" y="{164 + i * 19}" font-family="{SANS}" font-size="13" fill="#8b949e">{escape(line)}</text>'
+                    for i, line in enumerate(project["lines"]))
+    tags, x = [], 24
+    for label, color in project["tags"]:
+        w = len(label) * 6.6 + 18
+        tags.append(f'<rect x="{x}" y="{H - 40}" width="{w:.1f}" height="22" rx="11" fill="{color}" fill-opacity="0.12" stroke="{color}" stroke-opacity="0.5"/>'
+                    f'<text x="{x + 9}" y="{H - 25}" font-family="{MONO}" font-size="11" fill="{color}" '
+                    f'textLength="{len(label) * 6.6:.1f}" lengthAdjust="spacingAndGlyphs">{escape(label)}</text>')
+        x += w + 8
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">
+<defs>
+  <linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{W}" y2="{H}">
+    <stop offset="0" stop-color="#ff3cac"/><stop offset="0.5" stop-color="#784ba0"/><stop offset="1" stop-color="#2de2e6"/>
+    <animateTransform attributeName="gradientTransform" type="rotate" from="0 {W / 2} {H / 2}" to="360 {W / 2} {H / 2}" dur="8s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ff3cac"/><stop offset="1" stop-color="#2de2e6"/>
+  </linearGradient>
+</defs>
+<rect x="2" y="2" width="{W - 4}" height="{H - 4}" rx="14" fill="#0d1117" stroke="url(#border)" stroke-width="1.5"/>
+<g transform="translate(0 6)">
+{visual}
+</g>
+<text x="24" y="138" font-family="{SANS}" font-size="20" font-weight="700" fill="url(#title)">{escape(name)}</text>
+<text x="{W - 24}" y="138" text-anchor="end" font-family="{MONO}" font-size="11" fill="#8b949e">view repo -&gt;</text>
+{lines}
+{"".join(tags)}
+</svg>'''
+
+
 if __name__ == "__main__":
     ASSETS.mkdir(exist_ok=True)
-    (ASSETS / "header.svg").write_text(header() + "\n")
-    (ASSETS / "terminal.svg").write_text(terminal() + "\n")
-    print(f"wrote {ASSETS / 'header.svg'} and {ASSETS / 'terminal.svg'}")
+    outputs = {
+        "header.svg": header(),
+        "terminal.svg": terminal(),
+        "project-homelab.svg": project_card("homelab", PROJECTS["homelab"], homelab_visual()),
+        "project-email-optimizer.svg": project_card("email-optimizer", PROJECTS["email-optimizer"], email_visual()),
+    }
+    for filename, svg in outputs.items():
+        (ASSETS / filename).write_text(svg + "\n")
+        print(f"wrote {ASSETS / filename}")

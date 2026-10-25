@@ -1,32 +1,25 @@
 <div align="center">
-  <img src="./assets/header.svg" width="100%" alt="Hi, I'm Abhishek Deshpande: Software Developer, Data Scientist, Python Enthusiast"/>
+  <img src="./assets/header.svg" width="100%" alt="Hi, I'm Abhishek Deshpande: currently at UiPath, ex-SDE at AWS, into DevOps and cloud"/>
 </div>
 
 <br/>
 
 <div align="center">
-  <a href="https://abhishekdp.com">
-    <img src="./assets/terminal.svg" width="90%" alt="Terminal: whoami, currently learning Next.js, Kubernetes, Docker, CI/CD and Linux, and why [] == ![] is true in JavaScript"/>
-  </a>
+  <img src="./assets/terminal.svg" width="90%" alt="Terminal: whoami (now at UiPath, previously SDE at AWS), currently learning Kubernetes, Docker, CI/CD and Linux, why [] == ![] is true in JavaScript, and kubectl get pods"/>
 </div>
 
+## Featured Projects
+
 <div align="center">
-
-📫 **Discover My Work**: [abhishekdp.com](https://abhishekdp.com)
-
+  <a href="https://github.com/Abhishek-1804/homelab"><img src="./assets/project-homelab.svg" width="48%" alt="homelab: single-node k3s cluster on a headless laptop, reachable only over Tailscale, provisioned with mise, Terraform and 1Password"/></a>
+  <a href="https://github.com/Abhishek-1804/email-optimizer"><img src="./assets/project-email-optimizer.svg" width="48%" alt="email-optimizer: multi-account email client for bulk spam filtering over Gmail OAuth and IMAP"/></a>
 </div>
 
 ## Stats
 
 <div align="center">
-  
-  <img src="https://github-readme-stats.vercel.app/api?username=abhishek-1804&show_icons=true&rank_icon=github&include_all_commits=true&hide=contribs&cache_seconds=86400&theme=dracula&border_radius=10" height="150" alt="stats graph"  />
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=abhishek-1804&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&border_radius=10" height="150" alt="languages graph"  />
-
+  <img src="https://raw.githubusercontent.com/abhishek-1804/abhishek-1804/output/stats.svg" width="90%" alt="GitHub stats and top languages"/>
 </div>
-
-<br clear="both">
 
 ## Contribution City
 

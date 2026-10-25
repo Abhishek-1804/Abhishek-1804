@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 266" width="430" height="266">
+<defs>
+  <linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="430" y2="266">
+    <stop offset="0" stop-color="#ff3cac"/><stop offset="0.5" stop-color="#784ba0"/><stop offset="1" stop-color="#2de2e6"/>
+    <animateTransform attributeName="gradientTransform" type="rotate" from="0 215.0 133.0" to="360 215.0 133.0" dur="8s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ff3cac"/><stop offset="1" stop-color="#2de2e6"/>
+  </linearGradient>
+</defs>
+<rect x="2" y="2" width="426" height="262" rx="14" fill="#0d1117" stroke="url(#border)" stroke-width="1.5"/>
+<g transform="translate(0 6)">
+<path d="M95 62 H170 M260 62 H330" stroke="#30363d" stroke-width="2" stroke-dasharray="4 5"/>
+<rect x="25" y="30" width="70" height="54" rx="8" fill="#161b22" stroke="#e6edf3" stroke-width="1.5"/><text x="60.0" y="75" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11" fill="#e6edf3">laptop</text>
+<rect x="45" y="40" width="30" height="18" rx="2" fill="none" stroke="#e6edf3" stroke-width="1.5"/><path d="M40 61 h40" stroke="#e6edf3" stroke-width="1.5"/>
+<rect x="170" y="30" width="90" height="54" rx="8" fill="#161b22" stroke="#2de2e6" stroke-width="1.5"/><text x="215.0" y="75" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11" fill="#2de2e6">tailscale</text>
+<circle cx="203" cy="41" r="2" fill="#2de2e6" opacity="1"/>
+<circle cx="215" cy="41" r="2" fill="#2de2e6" opacity="0.4"/>
+<circle cx="227" cy="41" r="2" fill="#2de2e6" opacity="1"/>
+<circle cx="203" cy="48" r="2" fill="#2de2e6" opacity="0.4"/>
+<circle cx="215" cy="48" r="2" fill="#2de2e6" opacity="1"/>
+<circle cx="227" cy="48" r="2" fill="#2de2e6" opacity="0.4"/>
+<circle cx="203" cy="55" r="2" fill="#2de2e6" opacity="1"/>
+<circle cx="215" cy="55" r="2" fill="#2de2e6" opacity="0.4"/>
+<circle cx="227" cy="55" r="2" fill="#2de2e6" opacity="1"/>
+<rect x="330" y="22" width="80" height="70" rx="8" fill="#161b22" stroke="#ffd166" stroke-width="1.5"/><text x="370.0" y="83" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11" fill="#ffd166">k3s</text>
+<rect x="345" y="32" width="12" height="11" rx="2" fill="#7ee787"><animate attributeName="opacity" values="1;0.25;1" dur="1.60s" repeatCount="indefinite"/></rect>
+<rect x="363" y="32" width="12" height="11" rx="2" fill="#7ee787"><animate attributeName="opacity" values="1;0.25;1" dur="1.97s" repeatCount="indefinite"/></rect>
+<rect x="381" y="32" width="12" height="11" rx="2" fill="#7ee787"><animate attributeName="opacity" values="1;0.25;1" dur="2.34s" repeatCount="indefinite"/></rect>
+<rect x="345" y="48" width="12" height="11" rx="2" fill="#7ee787"><animate attributeName="opacity" values="1;0.25;1" dur="2.71s" repeatCount="indefinite"/></rect>
+<rect x="363" y="48" width="12" height="11" rx="2" fill="#7ee787"><animate attributeName="opacity" values="1;0.25;1" dur="3.08s" repeatCount="indefinite"/></rect>
+<rect x="381" y="48" width="12" height="11" rx="2" fill="#7ee787"><animate attributeName="opacity" values="1;0.25;1" dur="3.45s" repeatCount="indefinite"/></rect>
+<circle r="3.5" fill="#ff3cac" opacity="0"><animateMotion path="M95 62 H330" dur="2.4s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.05;0.4;0.95;1" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>
+<circle r="3.5" fill="#ff3cac" opacity="0"><animateMotion path="M95 62 H330" dur="2.4s" begin="0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.05;0.4;0.95;1" dur="2.4s" begin="0.8s" repeatCount="indefinite"/></circle>
+<circle r="3.5" fill="#ff3cac" opacity="0"><animateMotion path="M95 62 H330" dur="2.4s" begin="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.05;0.4;0.95;1" dur="2.4s" begin="1.6s" repeatCount="indefinite"/></circle>
+<text x="132" y="52" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="9" fill="#8b949e">ssh</text><text x="295" y="52" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="9" fill="#8b949e">kubectl</text>
+</g>
+<text x="24" y="138" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="url(#title)">homelab</text>
+<text x="406" y="138" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11" fill="#8b949e">view repo -&gt;</text>
+<text x="24" y="164" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#8b949e">Single-node k3s cluster on a headless laptop,</text><text x="24" y="183" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#8b949e">reachable only over Tailscale. Provisioned end to</text><text x="24" y="202" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#8b949e">end with mise, Terraform and 1Password secrets.</text>
+<rect x="24" y="226" width="37.8" height="22" rx="11" fill="#ffd166" fill-opacity="0.12" stroke="#ffd166" stroke-opacity="0.5"/><text x="33" y="241" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11" fill="#ffd166" textLength="19.8" lengthAdjust="spacingAndGlyphs">k3s</text><rect x="69.8" y="226" width="77.4" height="22" rx="11" fill="#d2a8ff" fill-opacity="0.12" stroke="#d2a8ff" stroke-opacity="0.5"/><text x="78.8" y="241" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11" fill="#d2a8ff" textLength="59.4" lengthAdjust="spacingAndGlyphs">terraform</text><rect x="155.2" y="226" width="77.4" height="22" rx="11" fill="#2de2e6" fill-opacity="0.12" stroke="#2de2e6" stroke-opacity="0.5"/><text x="164.2" y="241" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11" fill="#2de2e6" textLength="59.4" lengthAdjust="spacingAndGlyphs">tailscale</text><rect x="240.6" y="226" width="37.8" height="22" rx="11" fill="#ff9e64" fill-opacity="0.12" stroke="#ff9e64" stroke-opacity="0.5"/><text x="249.6" y="241" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11" fill="#ff9e64" textLength="19.8" lengthAdjust="spacingAndGlyphs">aws</text>
+</svg>
