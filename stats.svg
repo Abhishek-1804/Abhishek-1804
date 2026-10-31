@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 250" width="860" height="250">
+<defs>
+  <linearGradient id="border" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="860" y2="250">
+    <stop offset="0" stop-color="#ff3cac"/><stop offset="0.5" stop-color="#784ba0"/><stop offset="1" stop-color="#2de2e6"/>
+    <animateTransform attributeName="gradientTransform" type="rotate" from="0 430.0 125.0" to="360 430.0 125.0" dur="8s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ff3cac"/><stop offset="1" stop-color="#2de2e6"/>
+  </linearGradient>
+  <filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="5"/></filter>
+</defs>
+<style>
+  .in { animation: in 0.6s ease-out backwards; }
+  .bar { transform-box: fill-box; animation: grow 1.2s cubic-bezier(.2,.8,.2,1) backwards; }
+  @keyframes in { from { opacity: 0; transform: translateX(-8px); } }
+  @keyframes grow { from { transform: scaleX(0); } }
+</style>
+<rect x="4" y="4" width="852" height="242" rx="14" fill="none" stroke="url(#border)" stroke-width="4" filter="url(#soft)" opacity="0.8"/>
+<rect x="4" y="4" width="852" height="242" rx="14" fill="#0d1117" stroke="url(#border)" stroke-width="1.5"/>
+<line x1="430" x2="430" y1="30" y2="220" stroke="#30363d"/>
+<text x="30" y="46" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="url(#title)">GitHub Stats</text>
+<text x="460" y="46" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="20" font-weight="700" fill="url(#title)">Top Languages</text>
+<g class="in" style="animation-delay:0.15s"><circle cx="36" cy="79" r="4" fill="#ffd166"/><text x="50" y="84" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#8b949e">Stars Earned</text><text x="404" y="84" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="15" font-weight="700" fill="#e6edf3">2</text></g>
+<g class="in" style="animation-delay:0.27s"><circle cx="36" cy="108" r="4" fill="#2de2e6"/><text x="50" y="113" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#8b949e">Total Commits</text><text x="404" y="113" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="15" font-weight="700" fill="#e6edf3">1912</text></g>
+<g class="in" style="animation-delay:0.39s"><circle cx="36" cy="137" r="4" fill="#d2a8ff"/><text x="50" y="142" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#8b949e">Pull Requests</text><text x="404" y="142" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="15" font-weight="700" fill="#e6edf3">9</text></g>
+<g class="in" style="animation-delay:0.51s"><circle cx="36" cy="166" r="4" fill="#7ee787"/><text x="50" y="171" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#8b949e">Issues</text><text x="404" y="171" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="15" font-weight="700" fill="#e6edf3">4</text></g>
+<g class="in" style="animation-delay:0.63s"><circle cx="36" cy="195" r="4" fill="#58a6ff"/><text x="50" y="200" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#8b949e">Contributions (last year)</text><text x="404" y="200" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="15" font-weight="700" fill="#e6edf3">237</text></g>
+<g class="in" style="animation-delay:0.75s"><circle cx="36" cy="224" r="4" fill="#ff3cac"/><text x="50" y="229" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="14" fill="#8b949e">Streak (current / longest)</text><text x="404" y="229" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="15" font-weight="700" fill="#e6edf3">0 / 7 days</text></g>
+<g class="in" style="animation-delay:0.30s"><text x="460" y="80" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#e6edf3">Python</text><text x="830" y="80" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="12" fill="#8b949e">48.6%</text></g>
+<rect x="460" y="86" width="370" height="6" rx="3" fill="#21262d"/>
+<rect class="bar" style="animation-delay:0.50s" x="460" y="86" width="179.8" height="6" rx="3" fill="#3572A5"/>
+<g class="in" style="animation-delay:0.42s"><text x="460" y="108" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#e6edf3">TypeScript</text><text x="830" y="108" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="12" fill="#8b949e">21.7%</text></g>
+<rect x="460" y="114" width="370" height="6" rx="3" fill="#21262d"/>
+<rect class="bar" style="animation-delay:0.62s" x="460" y="114" width="80.1" height="6" rx="3" fill="#3178c6"/>
+<g class="in" style="animation-delay:0.54s"><text x="460" y="136" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#e6edf3">Shell</text><text x="830" y="136" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="12" fill="#8b949e">11.2%</text></g>
+<rect x="460" y="142" width="370" height="6" rx="3" fill="#21262d"/>
+<rect class="bar" style="animation-delay:0.74s" x="460" y="142" width="41.3" height="6" rx="3" fill="#89e051"/>
+<g class="in" style="animation-delay:0.66s"><text x="460" y="164" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#e6edf3">QML</text><text x="830" y="164" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="12" fill="#8b949e">10.8%</text></g>
+<rect x="460" y="170" width="370" height="6" rx="3" fill="#21262d"/>
+<rect class="bar" style="animation-delay:0.86s" x="460" y="170" width="39.9" height="6" rx="3" fill="#44a51c"/>
+<g class="in" style="animation-delay:0.78s"><text x="460" y="192" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#e6edf3">Nix</text><text x="830" y="192" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="12" fill="#8b949e">2.8%</text></g>
+<rect x="460" y="198" width="370" height="6" rx="3" fill="#21262d"/>
+<rect class="bar" style="animation-delay:0.98s" x="460" y="198" width="10.4" height="6" rx="3" fill="#7e7eff"/>
+<g class="in" style="animation-delay:0.90s"><text x="460" y="220" font-family="'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif" font-size="13" fill="#e6edf3">JavaScript</text><text x="830" y="220" text-anchor="end" font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="12" fill="#8b949e">2.3%</text></g>
+<rect x="460" y="226" width="370" height="6" rx="3" fill="#21262d"/>
+<rect class="bar" style="animation-delay:1.10s" x="460" y="226" width="8.7" height="6" rx="3" fill="#f1e05a"/>
+</svg>
